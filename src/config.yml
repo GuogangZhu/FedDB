@@ -1,0 +1,31 @@
+---
+# control
+control:
+  num_supervised: '4000'
+  threshold: '0.95'
+  num_clients: '100'
+  active_rate: '0.1'
+  labeled_data_split_mode: 'iid'
+  unlabeled_data_split_mode: 'iid'
+  local_epoch: '5-5'
+  gm: '0.5'
+# data
+data_name: CIFAR10
+model_name: wresnet28x2
+# experiment
+num_workers: 0
+init_seed: 0
+num_experiments: 1
+log_interval: 0.25
+device: cuda
+world_size: 1
+resume_mode: 0
+verbose: False
+# optimizer
+optimizer_name: SGD
+lr: 0.03
+momentum: 0.9
+weight_decay: 0.0005
+nesterov: True
+betas: (0.9,0.999)
+num_epochs: 800
